@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Happy New Year</title>
+</head>
+<body>
+    <h1 class="title">Tết này lì xì tao nhé</h1>
+    <img src="./image/meme.jpg" alt="" class="image-meme">
+    <div class="group-button">
+        <button id="btn-no">Không cút đi!!</button>
+        <button id="btn-yes">Oke nhé!!</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <img src="./image/yes.jpg" alt="Modal Image" style="max-width: 100%; width: 50%;">
+            <h2>Đúng là bạn yêu của tôi</h2>
+            <p>stk momo: 0329290543</p>
+        </div>
+    </div>
+    <script>
+        const btn_no = document.getElementById("btn-no");
+        const btn_yes = document.getElementById("btn-yes");
+        const modal = document.getElementById("myModal");
+        let currentScale = 1;
+        btn_no.addEventListener("click", mouseenter_click_no_btn);
+        btn_no.addEventListener("mouseenter", mouseenter_click_no_btn);
+        btn_yes.addEventListener("click", () => {
+            // Display the modal when "Yes" button is clicked
+            modal.style.display = "flex";
+        });
+
+
+        function mouseenter_click_no_btn(){
+            // Tạo giá trị ngẫu nhiên từ -200 đến 200
+            const randomX = Math.floor(Math.random() * 301) - 150;
+            const randomY = Math.floor(Math.random() * 301) - 150;
+
+            // Giảm kích thước hiện tại đi 10%
+            currentScale -= 0.1;
+
+            // Áp dụng giá trị ngẫu nhiên vào thuộc tính transform
+            btn_no.style.transform = `translate(${randomX}px, ${randomY}px) scale(${currentScale})`;
+            console.log(currentScale);
+            btn_yes.style.transform = `scale(${1+(1 - currentScale)})`;
+        }
+    </script>
+    </script>
+
+</body>
+</html>
