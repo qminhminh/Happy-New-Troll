@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Happy New Year</title>
 </head>
-<body>
+<body class="container">
     <h1 class="title">Tết này lì xì tao nhé</h1>
-    <!-- <img src="./image/meme.jpg" alt="" class="image-meme"> -->
     <div class="group-button">
-        <button id="btn-no">Không cút đi!!</button>
-        <button id="btn-yes">Oke nhé!!</button>
+        <button id="btn-no" class="btn btn-warning">Không cút đi!!</button>
+        <button id="btn-yes" class="btn btn-primary">Oke nhé!!</button>
     </div>
 
     <div class="year">
@@ -24,47 +24,55 @@
         <span class="y4 new">4</span>
         <div class="balloon"></div>
     </div>
-    <div class="firework" id="firework1">
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-    </div>
-    <div class="firework" id="firework2">
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-    </div>
-    <div class="firework" id="firework3">
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
-        <div class="cracker"></div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="firework" id="firework1">
+                <div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="firework" id="firework2">
+                <div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="firework" id="firework3">
+                <div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+<div class="cracker"></div>
+            </div>
+        </div>
     </div>
 
     <div id="myModal" class="modal">
@@ -74,6 +82,10 @@
             <p></p>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
         const btn_no = document.getElementById("btn-no");
         const btn_yes = document.getElementById("btn-yes");
@@ -86,9 +98,7 @@
             modal.style.display = "flex";
         });
 
-
         function mouseenter_click_no_btn(){
-            // Tạo giá trị ngẫu nhiên từ -200 đến 200
             const randomX = Math.floor(Math.random() * 601);
             const randomY = Math.floor(Math.random() * 301);
             currentScale -= 0.1;
@@ -97,6 +107,5 @@
             btn_yes.style.transform = `scale(${1+(1 - currentScale)})`;
         }
     </script>
-
 </body>
 </html>
