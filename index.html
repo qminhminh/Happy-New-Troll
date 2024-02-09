@@ -8,17 +8,70 @@
 </head>
 <body>
     <h1 class="title">Tết này lì xì tao nhé</h1>
-    <img src="./image/meme.jpg" alt="" class="image-meme">
+    <!-- <img src="./image/meme.jpg" alt="" class="image-meme"> -->
     <div class="group-button">
         <button id="btn-no">Không cút đi!!</button>
         <button id="btn-yes">Oke nhé!!</button>
     </div>
 
+    <div class="year">
+        <span class="first_year">
+            <span class="y1">2</span>
+            <span class="y2">0</span>
+            <span class="y3">2</span>
+        </span>
+        <span class="old">3</span>
+        <span class="y4 new">4</span>
+        <div class="balloon"></div>
+    </div>
+    <div class="firework" id="firework1">
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+    </div>
+    <div class="firework" id="firework2">
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+    </div>
+    <div class="firework" id="firework3">
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+        <div class="cracker"></div>
+    </div>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <img src="./image/yes.jpg" alt="Modal Image" style="max-width: 100%; width: 50%;">
+            <img src="./image/momo.jpg" alt="Modal Image" style="max-width: 100%; width: 50%;">
             <h2>Đúng là bạn yêu của tôi</h2>
-            <p>stk momo: 0329290543</p>
+            <p></p>
         </div>
     </div>
     <script>
@@ -36,18 +89,13 @@
 
         function mouseenter_click_no_btn(){
             // Tạo giá trị ngẫu nhiên từ -200 đến 200
-            const randomX = Math.floor(Math.random() * 301) - 150;
-            const randomY = Math.floor(Math.random() * 301) - 150;
-
-            // Giảm kích thước hiện tại đi 10%
+            const randomX = Math.floor(Math.random() * 601);
+            const randomY = Math.floor(Math.random() * 301);
             currentScale -= 0.1;
-
-            // Áp dụng giá trị ngẫu nhiên vào thuộc tính transform
             btn_no.style.transform = `translate(${randomX}px, ${randomY}px) scale(${currentScale})`;
             console.log(currentScale);
             btn_yes.style.transform = `scale(${1+(1 - currentScale)})`;
         }
-    </script>
     </script>
 
 </body>
